@@ -1,5 +1,5 @@
-Arianna Marin 
-WATS 1010 - Foundations of the Web
+Arianna Marin   
+WATS 1010 - Foundations of the Web  
 __CSS Zen Garden Redesign Concepts__
 ****
 
