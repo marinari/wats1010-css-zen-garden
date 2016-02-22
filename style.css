@@ -31,7 +31,6 @@ header h1, h2 {
 	display: inline;
 	color: #F2D5C2;
 }
-
 header {
 	margin: 10px;
 }
@@ -86,7 +85,7 @@ header {
 }
 
 footer {
-	background-color: #131A24;
+	background-color: #93746F;
 	border: double #b08d7d;
 	color: white;
 	padding: 10px;
@@ -99,6 +98,9 @@ footer ul {
 	padding-left: 40px;
 }
 
+.sidebar ul {
+	list-style-type: none;
+}
 .sidebar {
 	width: 400px;
 	margin-left: 480px;
@@ -106,21 +108,41 @@ footer ul {
 }
 
 .design-selection {
-	background-color: #B1B4B4;
-	box-shadow: -4px 4px 2px 0;
-	margin-bottom: 20px;
+	background-color: #FFB8B8;
+	/*border-style: none none outset outset;
+	border-width: 6px;
+	border-color: #A87979;*/
+	box-shadow: rgb(168, 121, 121) 1px 1px,
+    rgb(168, 121, 121) 2px 2px,
+    rgb(168, 121, 121) 3px 3px,
+    rgb(168, 121, 121) 4px 4px,
+    rgb(168, 121, 121) 5px 5px,
+    rgb(168, 121, 121) 6px 6px,
+    rgb(168, 121, 121) 7px 7px,
+    rgb(168, 121, 121) 8px 8px,
+    rgb(168, 121, 121) 9px 9px,
+    rgb(168, 121, 121) 10px 10px,
+    rgb(168, 121, 121) 11px 11px,
+    rgb(168, 121, 121) 12px 12px,
+    rgb(168, 121, 121) 13px 13px,
+    rgb(168, 121, 121) 14px 14px,;
+	margin-bottom: 40px;
 }
 
 .design-archives {
-	background-color: #B1B4B4;
-	box-shadow: -4px 4px 2px 0;
-	margin-bottom: 20px;
+	background-color: #FFB8B8;
+	border-style: none none outset outset;
+	border-width: 6px;
+	border-color: #A87979;
+	margin-bottom: 40px;
 }
 
 .zen-resources {
-	background-color: #B1B4B4;
-	box-shadow: -4px 4px 2px 0;
-	margin-bottom: 20px;
+	background-color: #FFB8B8;
+	border-style: none none outset outset;
+	border-width: 6px;
+	border-color: #A87979;
+	margin-bottom: 40px;
 }
 
 /* bottom of header image bottom of page
@@ -132,20 +154,123 @@ footer ul {
 	height: 300px;
 }
 */
-/*
-@media screen and (max-device-width: 480px) {
+
+/*smallest screen such as phone*/
+@media only screen and (max-width: 500px) {
+	body {
+		font-size: 10px;
+		background-position: 0 0;
+		margin: 0 auto;
+	}
+	.page-wrapper {
+		width: 500px;
+	}
+	header {
+    	font-size: 80%;
+    }
+	.intro {
+		background: url(mutesmall.png) no-repeat center;
+		background-size: cover;
+		width: 100%;
+	}
+	.summary {
+		width: 70%;
+  		text-align: center;
+  		color: white;
+  		background-color: rgba(19, 26, 36, 0.7);
+  		margin-left: 0px;
+  		padding-top: 0px;
+  		padding-bottom: 0px;
+  		height: 100px;
+	}
+	.explanation, .participation, .benefits, .requirements {
+   	width: 80%;
+   }
+   footer a {
+   	padding: 5px;
+   	font-size: 12px;
+   }
+   .sidebar {
+   	margin: 0px;
+   	float: left;
+   }
+   .design-selection, .design-archives, .zen-resources {
+  	margin-bottom: 5px;
+  }
+}
+
+
+
+/*styles for smaller screen such as tablet*/
+@media screen and (max-width: 880px) {
+	body {
+		background-position: 0 0;
+		margin: 0 auto;
+	}
     .page-wrapper {
-        width: 480px;
-        margin: 10px;
         display: flex;
         flex-wrap: wrap;
+        justify-content:center;
+        font-size: 12px;
     }
-    .preamble {
-    	position: relative;
+    #zen-supporting {
+    	margin-left: 0px;
+    	margin-top: 0px;
     }
-    .footer {
-    	position: relative;
-    }
+   .explanation, .participation, .benefits, .requirements {
+   	width: 97%;
+   	padding-left: 15px;
+   }
+  footer {
+  	padding: 0px;
+  	width: 100%;
+  }
+  footer a {
+  	padding: 40px;
+  	font-size: 14px;
+  }
+  .summary {
+  	width: 100%;
+  	text-align: center;
+  	color: white;
+  	line-height: 20%;
+  	font-size: 14px;
+  	background-color: rgba(19, 26, 36, 0.7);
+  	margin-left: 0px;
+  	padding-top: 5px;
+  	padding-bottom: 5px;
+  }
+  .preamble {
+  	margin: 0px;
+  	position: static;
+  	padding-top: 2px;
+  	padding-bottom: 2px;
+  	line-height: 20%;
+  	color: #131A24;
+  	background-color: rgba(176, 141, 125, 0.8);
+  }
+  .preamble p {
+  	line-height: 100%;
+  }
+  .intro {
+	width: 100%;
+  	margin: 0px;
+  	height: 300px;
+  }
+  header {
+  	text-align: center;
+  	font-size: 150%;
+  }
+  .sidebar {
+  	float: left;
+  	margin-top: 50px;
+  	margin-left: 0px;
+  	width: 80%;
+  }
+
+  .design-selection, .design-archives, .zen-resources {
+  	margin-bottom: 10px;
+  }
 }
-*/
+
 
