@@ -142,8 +142,12 @@ footer {
 	clear: both;
 	text-align: center;
 }
-footer a {
+footer a:link {
 	padding-left: 100px;
+	transition: all .2s ease-in-out;
+}
+footer a:hover {
+	font-size: 24px;
 }
 
 .sidebar ul {
