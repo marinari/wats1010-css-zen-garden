@@ -1,6 +1,15 @@
 /*CSS Zen Garden Styles- Arianna Marin 2016*/
 
+/*server-hosted font
+@font-face {
+  font-family: 'Fanwood';
+  src: url(Fanwood.otf) format("opentype");
+}*/
+
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic,700);
+
 body {
+	/*styes for entire background of page, should be gradient and fixed width*/
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -10,83 +19,122 @@ body {
   	background: -moz-linear-gradient(#131A24, #93746F); /* For Firefox 3.6 to 15 */
   	background: linear-gradient(to #131A24, #93746F);
   	background-position: 0 360px;
+  	font-size: 16px;
+  	font-family: 'Lora', 'Goudy Old Style', serif;
 }
-}
+
 .page-wrapper {
-	/*styes for entire background of page, should be gradient and fixed width*/
-	width: 880px;
-}	
+	width: 100%;
+}
+
+/* unvisited link */
+a:link {
+    color: #B08D7D;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #B08D7D;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #C9EAFF;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: #9C7264;
+    text-decoration: none;
+}
+.summary a:link {
+	color: #F2D5C2;
+}
+.summary a:hover {
+	color: #C9EAFF;
+}
 
 .intro {
 	/*styles for header of web page including summary and zen preamble*/
-	background: url(mutebanner.jpg) no-repeat top;
+	background: url(mutebanner.jpg) no-repeat;
 	background-size: cover;
 	width: 100%;
-	color: white;
 	height: 360px;
 	overflow: auto;
 	box-shadow: inset 0px -30px 30px -5px #131A24;
 }
 header h1, h2 {
-	display: inline;
 	color: #F2D5C2;
+	font-family: 'Lora';
+	font-weight: 700;
+	text-shadow: 1px 1px #131A24;
+	font-size: 28px;
+  	}
+header h2 {
+	font-size: 24px;
 }
 header {
-	margin: 10px;
+	margin: 40px;
+	line-height: 0.2;
 }
 .summary{
-	width: 30%;
-	margin-left: 15px;
-	color: #92D4FF;
-
+	width: 25%;
+	margin-left: 40px;
+	color: #1E293F;
+	font-family: 'Lora';
+	font-style: italic;
+	font-size: 14px;
+	background-color: rgba(176, 141, 125, 0.4);
+	box-shadow: 2px 2px 28px 3px #B08D7D;
 }
 .preamble {
 	/*styles for right box in header preamble*/
-	background-color: rgba(176, 141, 125, 0.5);
-	width: 400px;
-	margin-left: 480px;
-	top: 15px;
+	background-color: rgba(176, 141, 125, 0.6);
+	width: 500px;
+	margin-left: 580px;
+	top: 20px;
 	position: absolute;
 	padding-left: 10px;
 	font-size: 12px;
+	color: #F2D5C2;
+	transition: all .2s ease-in-out;
+}
+.preamble:hover {
+	transform: scale(1.1); 
 }
 
 #zen-supporting {
 	/*styles for body bg including footer except for sidebar*/	
 	float: left;
 	margin-left: 20px;
-	margin-top: 20px;
+	margin-top: 40px;
+	color: #1E293F;
 }
-.explanation {
+.explanation, .participation, .benefits {
 	background-color: #7BB1DE;
-	width: 400px;
+	width: 500px;
 	padding: 10px;
 	border: double #b08d7d;
+	border-width: 4px;
 }
-.participation {
-	background-color: #80B9DF;
-	padding: 10px;
-	width: 400px;
-	border: double #b08d7d;
-}
-.benefits {
-	background-color: #7BB1DE;
-	padding: 10px;
-	width: 400px;
-	border: double #b08d7d;
-}
+
 .requirements {
-	background-color: #80B9DF;
+	background-color: #7BB1DE;
 	padding: 10px;
-	width: 400px;
+	width: 500px;
 	border: double #b08d7d;
-	margin-bottom: 20px;
+	border-width: 4px;
+	margin-bottom: 40px;
 
 }
 
 footer {
 	background-color: #93746F;
 	border: double #b08d7d;
+	border-width: 4px;
 	color: white;
 	padding: 10px;
 	position: absolute;
@@ -94,17 +142,18 @@ footer {
 	clear: both;
 	text-align: center;
 }
-footer ul {
-	padding-left: 40px;
+footer a {
+	padding-left: 100px;
 }
 
 .sidebar ul {
 	list-style-type: none;
 }
 .sidebar {
-	width: 400px;
-	margin-left: 480px;
-	top: 5px;
+	width: 500px;
+	margin-left: 580px;
+	margin-top: 40px;
+	color: #1E293F;
 }
 
 .design-selection {
@@ -112,8 +161,8 @@ footer ul {
 	/*border-style: none none outset outset;
 	border-width: 6px;
 	border-color: #A87979;*/
-	box-shadow: rgb(168, 121, 121) 1px 1px,
-    rgb(168, 121, 121) 2px 2px,
+	box-shadow: rgb(178, 129, 129) 1px 1px,
+    rgb(178, 129, 129) 2px 2px,
     rgb(168, 121, 121) 3px 3px,
     rgb(168, 121, 121) 4px 4px,
     rgb(168, 121, 121) 5px 5px,
@@ -123,37 +172,49 @@ footer ul {
     rgb(168, 121, 121) 9px 9px,
     rgb(168, 121, 121) 10px 10px,
     rgb(168, 121, 121) 11px 11px,
-    rgb(168, 121, 121) 12px 12px,
-    rgb(168, 121, 121) 13px 13px,
-    rgb(168, 121, 121) 14px 14px,;
+    rgb(168, 121, 121) 12px 12px;
 	margin-bottom: 40px;
+	padding-bottom: 5px;
 }
 
 .design-archives {
 	background-color: #FFB8B8;
-	border-style: none none outset outset;
+	/*border-style: none none outset outset;
 	border-width: 6px;
-	border-color: #A87979;
+	border-color: #A87979;*/
+	box-shadow: rgb(178, 129, 129) 1px 1px,
+    rgb(178, 129, 129) 2px 2px,
+    rgb(168, 121, 121) 3px 3px,
+    rgb(168, 121, 121) 4px 4px,
+    rgb(168, 121, 121) 5px 5px,
+    rgb(168, 121, 121) 6px 6px,
+    rgb(168, 121, 121) 7px 7px,
+    rgb(168, 121, 121) 8px 8px,
+    rgb(168, 121, 121) 9px 9px,
+    rgb(168, 121, 121) 10px 10px,
+    rgb(168, 121, 121) 11px 11px,
+    rgb(168, 121, 121) 12px 12px;
 	margin-bottom: 40px;
+	padding-bottom: 5px;
 }
 
 .zen-resources {
 	background-color: #FFB8B8;
-	border-style: none none outset outset;
-	border-width: 6px;
-	border-color: #A87979;
+	box-shadow: rgb(178, 129, 129) 1px 1px,
+    rgb(178, 129, 129) 2px 2px,
+    rgb(168, 121, 121) 3px 3px,
+    rgb(168, 121, 121) 4px 4px,
+    rgb(168, 121, 121) 5px 5px,
+    rgb(168, 121, 121) 6px 6px,
+    rgb(168, 121, 121) 7px 7px,
+    rgb(168, 121, 121) 8px 8px,
+    rgb(168, 121, 121) 9px 9px,
+    rgb(168, 121, 121) 10px 10px,
+    rgb(168, 121, 121) 11px 11px,
+    rgb(168, 121, 121) 12px 12px;
 	margin-bottom: 40px;
+	padding-bottom: 5px;
 }
-
-/* bottom of header image bottom of page
-.extra6 {
-	background: url(mutebanner) no-repeat bottom;
-	background-size: cover;
-	width: 100%;
-	z-index: -10;
-	height: 300px;
-}
-*/
 
 /*smallest screen such as phone*/
 @media only screen and (max-width: 500px) {
@@ -168,10 +229,17 @@ footer ul {
 	header {
     	font-size: 80%;
     }
+    header h1, h2 {
+    	display: block;
+    	line-height: 50%;
+    }
 	.intro {
 		background: url(mutesmall.png) no-repeat center;
 		background-size: cover;
 		width: 100%;
+		height: 800px;
+		overflow: auto;
+		line-height: 100%;
 	}
 	.summary {
 		width: 70%;
@@ -181,7 +249,6 @@ footer ul {
   		margin-left: 0px;
   		padding-top: 0px;
   		padding-bottom: 0px;
-  		height: 100px;
 	}
 	.explanation, .participation, .benefits, .requirements {
    	width: 80%;
@@ -199,6 +266,20 @@ footer ul {
   }
 }
 
+/*estimate tablet size*/
+@media screen and (min-width: 880px) and (max-width: 1000px){
+	body {
+		margin: 0 auto;
+		font-size: 14px;
+	}
+	.explanation, .participation, .benefits, .requirements {
+	width: 400px;
+	}
+	.sidebar, .preamble {
+		width: 400px;
+		margin-left: 50%;
+	}
+}
 
 
 /*styles for smaller screen such as tablet*/
